@@ -1,0 +1,43 @@
+.features {
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 6rem;
+  align-items: start;
+
+  @media only screen and (max-width: $bp-phone) {
+    margin: 6rem 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-row-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+  column-gap: 2.5rem;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-phone) {
+    padding: 3rem 4rem;
+    border-radius: 5px;
+    box-shadow: 0 1rem 1rem rgba(#000, 0.2);
+  }
+
+  &__icon {
+    fill: $color-primary;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    grid-column: 2 / 3;
+    align-self: start;
+  }
+}
